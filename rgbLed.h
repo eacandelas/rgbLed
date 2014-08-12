@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 
+#define FLASH_DELAY 500
+
 enum  colors{
 	RED, 
 	GREEN,

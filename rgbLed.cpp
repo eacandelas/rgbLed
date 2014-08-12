@@ -40,6 +40,12 @@ void rgbLed::setValues(colors color){
 			_valB = 255;
 			break;
 
+		case ORANGE:
+			_valR = 200;
+			_valG = 200;
+			_valB = ;
+			break;
+
 		default:
 			Serial.println("Not valid value");
 			Serial.println("Setting white");
@@ -77,4 +83,17 @@ void rgbLed::off(){
 	analogWrite(_pinR, 0);
 	analogWrite(_pinG, 0);
 	analogWrite(_pinB, 0);
+}
+
+void rgbLed::flash(int times){
+	for(int i=times; i > 0; i-- ){
+		analogWrite(_pinR, 0);
+		analogWrite(_pinG, 0);
+		analogWrite(_pinB, 0);
+		delay(FLASH_DELAY);	
+		analogWrite(_pinR, _valR);
+		analogWrite(_pinG, _valG);
+		analogWrite(_pinB, _valB);
+		delay(FLASH_DELAY);
+	}
 }
