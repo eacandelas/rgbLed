@@ -9,7 +9,8 @@ enum  colors{
 	RED, 
 	GREEN,
 	BLUE,
-	WHITE
+	WHITE,
+	ORANGE
 } ;
 
 class rgbLed {
@@ -24,6 +25,7 @@ public:
 	byte getValues(colors color);
 	void update();
 	void off();
+	void flash(int times);
 
 
 private:
