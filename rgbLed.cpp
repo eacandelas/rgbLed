@@ -43,7 +43,7 @@ void rgbLed::setValues(colors color){
 		case ORANGE:
 			_valR = 200;
 			_valG = 200;
-			_valB = ;
+			_valB = 200;
 			break;
 
 		default:
